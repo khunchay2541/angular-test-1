@@ -1,0 +1,47 @@
+<mat-toolbar color="primary" class="mtb">
+    <button mat-button (click)="onClickNavToggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    
+    <span >Lighting Status</span>
+    <span class="flex-fill"></span>
+     <!-- flex-fill ช่วยให้ แท็กซ้ายชิเซ้ายสุด ขวาชิดขวาสุด -->
+    <div class="d-flex align-items-center" >
+        <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+        <!-- class vl คือเส้นขั้น icon -->
+        <div class="vl"></div>
+        <button mat-icon-button>
+            <mat-icon>mail_outline</mat-icon>
+        </button>
+        <div class="vl"></div> 
+        <button mat-icon-button>
+            <mat-icon>dashboard</mat-icon>
+        </button>
+    </div>
+    <!-- matMenu -->
+    <button mat-button [matMenuTriggerFor]="menu">
+        <img class="avatar rounded-circle bg-white"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/500px-Angular_full_color_logo.svg.png"
+            alt="">
+        <span class="ml-2">Admin iBlurBlur</span>
+    </button>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+        </button>
+    </mat-menu>
+
+    
+</mat-toolbar>
