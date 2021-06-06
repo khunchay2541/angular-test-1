@@ -3,7 +3,7 @@
         <mat-icon>menu</mat-icon>
     </button>
     
-    <span >Lighting Status</span>
+    <span *ngIf="!mediaQueryMax" >Lighting Status</span>
     <span class="flex-fill"></span>
      <!-- flex-fill ช่วยให้ แท็กซ้ายชิเซ้ายสุด ขวาชิดขวาสุด -->
     <div class="d-flex align-items-center" >
